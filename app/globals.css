@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-ivory-cream: #fef7ee;
+  --color-golden-sand: #f6c768;
+  --color-slate-grey: #6f757c;
+  --color-charcoal-black: #1b1d1f;
+  --color-mint-green: #bee3cc;
+  --color-espresso-brown: #302522;
+  --color-deep-charcoal: #111315;
+  --color-steel-blue-grey: #4d5562;
+  --color-coral-red: #ed735d;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-deep-charcoal);
+  background-image: url("../public/bg-cafe-sm.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  body {
+    background-image: url("../public/bg-cafe.jpg");
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url("../public/bg-cafe-lg.jpg");
+  }
 }
